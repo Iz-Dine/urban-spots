@@ -1,0 +1,129 @@
+/* Algemene opmaak */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+    border-bottom: 5px solid #e60000;
+}
+
+h1 {
+    font-family: 'Pirata One', cursive;
+    font-size: 3rem;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #e60000;
+}
+
+.map-section {
+    position: relative;
+    text-align: center;
+    padding: 2rem;
+}
+
+.map-section img {
+    width: 90%;
+    max-width: 900px;
+    border: 3px solid #000;
+    border-radius: 10px;
+}
+
+/* Treasure points (knoppen op kaart) */
+.treasure-point {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #e60000;
+    border: 2px solid #000;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Popup styling */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 1rem;
+    border: 3px solid #e60000;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    width: 80%;
+    box-shadow: 0 0 10px #000;
+}
+
+.popup-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Navigatiebalk */
+.navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5rem 0;
+    border-top: 5px solid #e60000;
+}
+
+.nav-item {
+    text-align: center;
+    color: #fff;
+}
+
+.nav-label {
+    display: block;
+    font-size: 0.8rem;
+    color: #e60000;
+    margin-bottom: 0.3rem;
+}
+
+.nav-button img {
+    width: 30px;
+    height: auto;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
