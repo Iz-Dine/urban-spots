@@ -1,0 +1,80 @@
+<!-- Spotmap.html -->
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpotMap</title>
+  <style>
+    body { font-family: sans-serif; background-color: white; color: black; margin: 0; padding: 0; }
+    header { background-color: #dc2626; color: white; padding: 1rem; }
+    nav { background-color: #333; padding: 0.5rem; }
+    nav a { color: white; margin-right: 1rem; text-decoration: none; }
+    main { display: flex; padding: 1rem; }
+    aside { width: 25%; background-color: #f3f3f3; padding: 1rem; }
+    section { width: 75%; padding: 1rem; }
+    #map { width: 100%; height: 500px; }
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+</head>
+<body>
+  <header>
+    <h1>De SpotMap</h1>
+  </header>
+  <nav>
+    <a href="Home.html">Home</a>
+    <a href="Spotmap.html">Spotmap</a>
+    <a href="Challenges.html">Challenges</a>
+    <a href="About.html">Over ons</a>
+  </nav>
+  <main>
+    <aside>
+      <h2>Filters</h2>
+      <label><input type="checkbox" class="filter" value="skate"> Skateboarden</label><br>
+      <label><input type="checkbox" class="filter" value="freerun"> Freerunning</label><br>
+      <label><input type="checkbox" class="filter" value="bmx"> BMX</label><br>
+      <label><input type="checkbox" class="filter" value="dance"> Streetdance</label><br>
+    </aside>
+    <section>
+      <div id="map"></div>
+    </section>
+  </main>
+  <script>
+    const map = L.map('map').setView([52.3702, 4.8952], 13);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const spots = [
+      { name: 'Museumplein Skatepark', type: 'skate', coords: [52.3576, 4.8796] },
+      { name: 'Flevopark BMX Track', type: 'bmx', coords: [52.3625, 4.9424] },
+      { name: 'Westerpark Freerun', type: 'freerun', coords: [52.3842, 4.8745] },
+      { name: 'Vondelpark Dance Circle', type: 'dance', coords: [52.3584, 4.8696] }
+    ];
+
+    const markers = [];
+
+    spots.forEach(spot => {
+      const marker = L.marker(spot.coords).addTo(map).bindPopup(spot.name);
+      marker.type = spot.type;
+      markers.push(marker);
+    });
+
+    document.querySelectorAll('.filter').forEach(box => {
+      box.addEventListener('change', () => {
+        const activeFilters = Array.from(document.querySelectorAll('.filter:checked')).map(cb => cb.value);
+
+        markers.forEach(marker => {
+          if (activeFilters.length === 0 || activeFilters.includes(marker.type)) {
+            marker.addTo(map);
+          } else {
+            map.removeLayer(marker);
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

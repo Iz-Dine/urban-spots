@@ -1,52 +1,31 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Street Spots Amsterdam</title>
-    <link rel="shortcut icon" href="/1.5x/Asset1.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik+Spray+Paint&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Urban Sports Amsterdam</title>
+  <style>
+    body { font-family: sans-serif; background-color: white; color: black; margin: 0; padding: 0; }
+    header { background-color: #dc2626; color: white; padding: 1rem; }
+    nav { background-color: #333; padding: 0.5rem; }
+    nav a { color: white; margin-right: 1rem; text-decoration: none; }
+    main { padding: 1rem; }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Street Spots Amsterdam</h1>
-        <p>Ontdek urban sports plekken in jouw stad</p>
-    </header>
-    <main>
-        <h2></h2>
-        <article class="map-section">
-            <img src="foto/map.png" alt="Kaart van Amsterdam met urban spots">
-            <button class="treasure-point" style="top: 40%; left: 50%;" aria-label="Spot 1" onclick="openPopup('tip1.jpg', 'Een populaire skateplek met smooth asfalt en ledges.')"></button>
-            <button class="treasure-point" style="top: 60%; left: 70%;" aria-label="Spot 2" onclick="openPopup('tip2.jpg', 'Hidden gem met trappen en rails.')"></button>
-            <button class="treasure-point" style="top: 49%; left: 25%;" aria-label="Spot 3" onclick="openPopup('tip3.jpg', 'Een creatieve freerun spot met veel obstakels.')"></button>
-        </article>
-        <div id="popup" class="popup">
-            <div class="popup-content">
-                <span class="close-btn">&times;</span>
-                <img id="popup-image" src="/foto/fliperkast1.jpg" alt="Spot afbeelding">
-                <p id="popup-text"></p>
-            </div>
-        </div>
-
-        <nav class="navbar">
-            <div class="nav-item">
-                <span class="nav-label">Home</span>
-                <a href="index.html" class="nav-button"><img src="foto/MP4.png" alt="Home"></a>
-            </div>
-            <div class="nav-item">
-                <span class="nav-label">Spots</span>
-                <a href="spots.html" class="nav-button"><img src="foto/pin.png" alt="Spots"></a>
-            </div>
-            <div class="nav-item">
-                <span class="nav-label">Challenges</span>
-                <a href="challenges.html" class="nav-button"><img src="/1.5x/Assetskatebord.png" alt="Challenges"></a>
-            </div>
-        </nav>
-        
-    </main>
+  <header>
+    <h1>Urban Sports Amsterdam</h1>
+  </header>
+  <nav>
+    <a href="Home.html">Home</a>
+    <a href="Spotmap.html">Spotmap</a>
+    <a href="Challenges.html">Challenges</a>
+    <a href="About.html">Over ons</a>
+  </nav>
+  <main>
+    <h2>Welkom bij Urban Sports Amsterdam</h2>
+    <p>Ontdek de beste plekken en uitdagingen voor urban sports zoals skateboarden, freerunning, BMX en streetdance.</p>
+    <p>Onze missie is om jongeren te verbinden met de stad via sport, beweging en plezier in de buitenlucht.</p>
+  </main>
 </body>
 </html>
