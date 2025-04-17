@@ -2,30 +2,38 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Urban Sports Amsterdam</title>
-  <style>
-    body { font-family: sans-serif; background-color: white; color: black; margin: 0; padding: 0; }
-    header { background-color: #dc2626; color: white; padding: 1rem; }
-    nav { background-color: #333; padding: 0.5rem; }
-    nav a { color: white; margin-right: 1rem; text-decoration: none; }
-    main { padding: 1rem; }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UrbanSpots Links</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/a2e0f1f0f4.js" crossorigin="anonymous"></script>
 </head>
-<body>
-  <header>
-    <h1>Urban Sports Amsterdam</h1>
-  </header>
-  <nav>
-    <a href="Home.html">Home</a>
-    <a href="Spotmap.html">Spotmap</a>
-    <a href="Challenges.html">Challenges</a>
-    <a href="About.html">Over ons</a>
-  </nav>
-  <main>
-    <h2>Welkom bij Urban Sports Amsterdam</h2>
-    <p>Ontdek de beste plekken en uitdagingen voor urban sports zoals skateboarden, freerunning, BMX en streetdance.</p>
-    <p>Onze missie is om jongeren te verbinden met de stad via sport, beweging en plezier in de buitenlucht.</p>
-  </main>
+<body class="bg-black text-white font-sans min-h-screen flex flex-col items-center justify-center px-4">
+
+  <div class="max-w-md w-full text-center">
+    <!-- Profielfoto -->
+    <img src="https://via.placeholder.com/100" alt="Profile" class="mx-auto mb-4 rounded-full border-2 border-white" />
+
+    <!-- Titel -->
+    <h1 class="text-2xl font-bold mb-2">UrbanSpots</h1>
+    <p class="text-sm text-gray-400 mb-6">Jouw gids voor urban sports in Amsterdam</p>
+
+    <!-- Link Knoppen -->
+    <div class="flex flex-col gap-4">
+      <a href="home.html" class="flex items-center justify-center gap-2 bg-red-600 text-white py-3 rounded-full hover:bg-red-700 transition">
+        <i class="fas fa-home"></i>
+        Naar de Homepagina
+      </a>
+      <a href="https://www.figma.com/proto/UCDHCk5Dybg9r4JGg3A8gR/UrbanSpotsConcepts?node-id=80-106&p=f&t=qQJwzDCvBRgyWvNe-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=80%3A106"
+        target="_blank"
+        class="flex items-center justify-center gap-2 bg-red-600 text-white py-3 rounded-full hover:bg-red-700 transition">
+        <i class="fab fa-figma"></i>
+        Bekijk Prototype
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <p class="text-xs text-gray-500 mt-6">© 2025 UrbanSpots</p>
+  </div>
+
 </body>
 </html>
